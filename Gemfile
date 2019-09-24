@@ -13,7 +13,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'capybara', '~> 2.4.4'
 gem 'poltergeist', '~> 1.6.0'
 gem 'phantomjs', '~> 1.9.8.0'
-gem 'pg', group: :production
+gem 'pg'
 
 # Access an IRB console on exception pages or by using <%= console %> in views
 gem 'web-console', '~> 2.0', group: :development
