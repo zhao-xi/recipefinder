@@ -90,6 +90,7 @@ GEM
     multi_xml (0.6.0)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
+    pg (1.1.4)
     phantomjs (1.9.8.0)
     poltergeist (1.6.0)
       capybara (~> 2.1)
@@ -186,6 +187,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   phantomjs (~> 1.9.8.0)
   poltergeist (~> 1.6.0)
   rails (= 4.2.8)
