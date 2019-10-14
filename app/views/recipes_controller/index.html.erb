@@ -21,6 +21,10 @@ Enter here:
 <% end %>
 </div>
 <br>
+
+<% if @recipes.nil? %>
+No results returned.
+<% else %>
 <table border="1">
 	<tr>
 		<th>Thumbnail</th>
@@ -34,3 +38,4 @@ Enter here:
 		</tr>
 	<% end %>
 </table>
+<% end %>
