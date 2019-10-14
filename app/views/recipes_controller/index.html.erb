@@ -1,22 +1,31 @@
-<h1>Searching for - <%= @keyword %></h1>
+<!--</h1>Searching for - <%= @keyword %></h1>-->
+<style type="text/css">
+	h1 {
+		color: green;
+		font-size: 25px;
+	}
+</style>
 
-<% if @recipes.nil? %>
-<p>Sorry, no recipes found.</p>
+<h1>HENTEKI RECIPE FINDER</h1>
 
-<% else %>
-
-	<table border="1">
-		<tr>
-			<th>Thumbnail</th>
-			<th>Title</th>
-			<th>Social Rank</th>
-		</tr>
-		<% @recipes.each do |recipe| %>
-				<td><%= link_to(image_tag(recipe["image_url"], size: "100"), recipe["source_url"] ) %></td>
-				<td><%= link_to(sanitize(recipe["title"]), recipe["source_url"])  %></td>
-				<td><%= recipe["social_rank"]%></td>
-			</tr>
-		<% end %>
-	</table>
-
+<br>
+<div>
+<%= form_tag("", method: "get") do %>
+  <%= text_field_tag(:search, @keyword) %>
+  <%= submit_tag("Find Recipe") %>
 <% end %>
+</div>
+<br>
+<table border="1">
+	<tr>
+		<th>Thumbnail</th>
+		<th>Title</th>
+		<th>Social Rank</th>
+	</tr>
+	<% @recipes.each do |recipe| %>
+			<td><%= link_to(image_tag(recipe["image_url"], size: "100"), recipe["source_url"] ) %></td>
+			<td><%= link_to(sanitize(recipe["title"]), recipe["source_url"])  %></td>
+			<td><%= recipe["social_rank"]%></td>
+		</tr>
+	<% end %>
+</table>
