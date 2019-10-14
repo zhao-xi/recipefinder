@@ -8,6 +8,9 @@
 		color: blue;
 		font-size: 20px;
 	}
+	.alert {
+		color: red;
+	}
 </style>
 
 <h1>HENTEKI RECIPE FINDER</h1>
@@ -17,13 +20,14 @@
 Enter here:
 <%= form_tag("", method: "get") do %>
   <%= text_field_tag(:search, @keyword) %>
-  <%= submit_tag("") %>
+  <%= submit_tag("Search Recipe") %>
 <% end %>
 </div>
 <br>
 
 <% if @recipes.nil? %>
-No results returned.
+<p class = "alert">No results returned.</p>
+<p>Possibly the api usage reached limitations which is 50 times/day, we are sorry that we are using the free plan:(, you can try tomorrow maybe?</p>
 <% else %>
 <table border="1">
 	<tr>
