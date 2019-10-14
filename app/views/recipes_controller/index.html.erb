@@ -4,12 +4,17 @@
 		color: green;
 		font-size: 25px;
 	}
+	.question {
+		color: blue;
+		font-size: 20px;
+	}
 </style>
 
 <h1>HENTEKI RECIPE FINDER</h1>
 
-<br>
+<p class="question">What would you like to eat？</p>
 <div>
+Enter here:
 <%= form_tag("", method: "get") do %>
   <%= text_field_tag(:search, @keyword) %>
   <%= submit_tag("Find Recipe") %>
