@@ -1,2 +1,3 @@
-2020/06/17 --- oh no, this app died, and I have no plan to fix it. It was just an exercise project of Ruby on Rails.
+2020/06/17 --- oh no, this app died, and I have no plan to fix it. It was just an exercise project of Ruby on Rails. (by Zhao Xi)
+
 This app is deployed at https://recipefinder-zhao.herokuapp.com
